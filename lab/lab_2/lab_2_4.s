@@ -1,7 +1,7 @@
 @ Calcolo quoziente e resto della divisione m/n
 
 .data
-    mn: .word   26, 12           @ m, n. Numeri interi positivi
+mn:     .word   26, 12           @ m, n. Numeri interi positivi
 
 .text
 main:   LDR R3, =mn             @ carico l'array
@@ -14,7 +14,7 @@ rem:    CMP R1, R2              @ Aggiorno il registro di stato
 
 div:    SUB R1, R1, R2         @ m - n
         ADD R0, R0, #1         @ quoziente + 1
-        B rem                  
+        B   rem
 
 stop:   SWI 0x11
 
