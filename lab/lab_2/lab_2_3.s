@@ -1,3 +1,6 @@
+@ programma che sostituisce il vettore con una sua
+@ rotazione in cui ogni elemento viene spostato in avanti di una
+@ locazione.
 .data
 	array:	.word	1, 2, 3
 
@@ -6,7 +9,7 @@
 	LDR	R1, [R0]
 	LDR	R2, [R0, #4]
 	LDR	R3, [R0, #8]
-	
+
 	STR	R2, [R0]
 	STR	R3, [R0, #4]
 	STR	R1, [R0, #8]

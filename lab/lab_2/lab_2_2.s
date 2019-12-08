@@ -1,3 +1,5 @@
+@ programma che sostituisce ogni valore nel
+@ vettore con il suo quadruplo
 .data
 	num:	.word	1, 2, 4
 

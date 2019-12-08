@@ -1,3 +1,5 @@
+@  programma che sostituisce il vettore con
+@ il vettore contenente i primi 4 numeri naturali.
 .data
 	array:	.word	0, 0, 0, 0
 

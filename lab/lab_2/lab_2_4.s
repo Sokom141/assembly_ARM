@@ -1,5 +1,4 @@
 @ Calcolo quoziente e resto della divisione m/n
-
 .data
 mn:     .word   26, 12           @ m, n. Numeri interi positivi
 
