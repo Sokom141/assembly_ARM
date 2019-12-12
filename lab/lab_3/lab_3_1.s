@@ -27,7 +27,7 @@ print_array:
 	swi	PrintInt
 	add	r8, r8, #1
 	cmp	r8, r7
-	ble	print_ar
+	ble	print_array
 	b	end
 
 end:	swi	0x11
