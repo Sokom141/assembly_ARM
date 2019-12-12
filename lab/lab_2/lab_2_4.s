@@ -9,7 +9,7 @@ main:   LDR R3, =mn             @ carico l'array
 
 rem:    CMP R1, R2              @ Aggiorno il registro di stato
         BGE div                 @ Se m >= n branch alla divsione
-        B stop                  @ Branch a software interrupt
+        B   stop                @ Branch a software interrupt
 
 div:    SUB R1, R1, R2         @ m - n
         ADD R0, R0, #1         @ quoziente + 1

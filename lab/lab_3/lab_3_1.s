@@ -1,22 +1,26 @@
 .data
-len:	.word	20
-array:	.skip	20
-.equ	PrintInt, 0x6b
+	len:	.word	20
+	array:	.skip	20
+	.equ	PrintInt, 0x6b
 
 .text
-_start:	ldr	r0, =array
+_start:
+	ldr	r0, =array		@ load memory
 	ldr	r1, =len
 	ldr	r1, [r1]
 
-store:	str	r2, [r0, r3, lsl #2]
-	add	r3, r3, #1
+store:
+	str	r2, [r0, r3, lsl #2]	@ store in array
+	add	r3, r3, #1		@ add 1 to offset
 	b	main
 
-main:	add	r2, r2, #1
-	cmp	r2, r1
-	ble	store
-	b	load_print_array
+main:
+	add	r2, r2, #1
+	cmp	r2, r1			@ compare
+	ble	store			@ .. if less or equal branch to store
+	b	load_print_array	@ .. else branch to load_print_array / end
 
+@ extra: print array
 load_print_array:
 	mov	r9, r0
 	mov	r0, #1
@@ -30,6 +34,7 @@ print_array:
 	ble	print_array
 	b	end
 
-end:	swi	0x11
+end:
+	swi	0x11
 
 .end
