@@ -1,5 +1,5 @@
 .data
-seq:	.word	0b10100000011111111000000101
+seq:	.word	0b10100001111110000101
 
 .text
 main:	ldr	r0, =seq
