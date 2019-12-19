@@ -1,12 +1,11 @@
 .data
-am: .word   2, 16   @ a^x = m
+am: .word   2, 9   @ a^x = m
 
 .text
 _start:
     ldr r0, =am
     ldr r1, [r0, #4]
     ldr r0, [r0]
-
     mov r3, #1
 
 main:
